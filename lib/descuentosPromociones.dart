@@ -35,48 +35,40 @@ class DescuentosPromociones extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        //shadowColor: Colors.blueAccent,
-                        //elevation: 10,
-                        child: ClipPath(
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15))),
-                          child: Container(
-                              height: 151.79,
-                              width: 151.79,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFFFFF),
+                      child: ClipPath(
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        child: Container(
+                            height: 197,
+                            width: 197,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFFFFF),
+                            ),
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          ImagenCafe(),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
-                              padding: EdgeInsets.all(10.0),
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                alignment: Alignment.center,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            ImagenCafe(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ),
+                            )),
                       ),
                     ),
                   ],
@@ -86,100 +78,77 @@ class DescuentosPromociones extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        //shadowColor: Colors.blueAccent,
-                        //elevation: 10,
-                        child: ClipPath(
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15))),
-                          child: Container(
-                              height: 263,
-                              width: 311,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFFFFF),
+                      child: ClipPath(
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        child: Container(
+                            height: 263,
+                            width: 311,
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          ImagenCafe2(),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
-                              padding: EdgeInsets.all(10.0),
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                alignment: Alignment.center,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            ImagenCafe2(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ),
+                            )),
                       ),
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
-                SizedBox(height: 10),
+                SizedBox(height: 20),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        //shadowColor: Colors.blueAccent,
-                        //elevation: 10,
-                        child: ClipPath(
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15))),
-                          child: Container(
-                              height: 263,
-                              width: 311,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFFFFF),
+                      child: ClipPath(
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        child: Container(
+                            height: 263,
+                            width: 311,
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          ImagenCafe3(),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
-                              padding: EdgeInsets.all(10.0),
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                alignment: Alignment.center,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            ImagenCafe3(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ),
+                            )),
                       ),
                     ),
                   ],
@@ -190,48 +159,37 @@ class DescuentosPromociones extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        //shadowColor: Colors.blueAccent,
-                        //elevation: 10,
-                        child: ClipPath(
-                          clipper: ShapeBorderClipper(
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(15))),
-                          child: Container(
-                              height: 263,
-                              width: 311,
-                              decoration: BoxDecoration(
-                                color: Color(0xFFFFFFFF),
+                      child: ClipPath(
+                        clipper: ShapeBorderClipper(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(15))),
+                        child: Container(
+                            height: 263,
+                            width: 311,
+                            padding: EdgeInsets.all(10.0),
+                            alignment: Alignment.centerLeft,
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          ImagenCafe4(),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
                               ),
-                              padding: EdgeInsets.all(10.0),
-                              alignment: Alignment.centerLeft,
-                              child: Container(
-                                alignment: Alignment.center,
-                                child: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            ImagenCafe4(),
-                                          ],
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ),
+                            )),
                       ),
                     ),
                   ],
@@ -250,8 +208,8 @@ class ImagenCafe extends StatelessWidget {
     AssetImage assetImage = AssetImage('img/cafe.png');
     Image image = Image(
       image: assetImage,
-      width: 127,
-      height: 127,
+      width: 177,
+      height: 177,
     );
     return Container(
       child: image,
@@ -292,7 +250,7 @@ class ImagenCafe3 extends StatelessWidget {
 class ImagenCafe4 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    AssetImage assetImage = AssetImage('img/cafe4.png');
+    AssetImage assetImage = AssetImage('img/cafe3.png');
     Image image = Image(
       image: assetImage,
       width: 291,
@@ -303,10 +261,3 @@ class ImagenCafe4 extends StatelessWidget {
     );
   }
 }
-/*
-*   Text('Membresía',
-                                              style: GoogleFonts.mavenPro(
-                                                  fontSize: 18,
-                                                  color: Color(0xFF0058A3),
-                                                  fontWeight: FontWeight.bold))
-                                                  * */

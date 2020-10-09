@@ -435,6 +435,9 @@ class Establecimientos extends StatelessWidget {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
               ],
             ),
           ),

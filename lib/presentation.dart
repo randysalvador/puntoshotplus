@@ -183,7 +183,7 @@ Widget CardWidget(BuildContext context) {
           ),
         ),
         onTap: () {
-          Get.to(MembresiaDigital());
+          Get.to(QrCode());
         },
       ),
       SizedBox(

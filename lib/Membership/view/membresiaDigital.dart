@@ -1,20 +1,18 @@
 import 'dart:ui';
-
 import 'package:barcode_scan/barcode_scan.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:puntoshots/presentation.dart';
 import 'package:get/get.dart';
-import 'package:puntoshots/qr_scan_controller.dart';
+import 'package:puntoshots/QrScan/controller/qr_scan_controller.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
-
 void main() {
-  runApp( GetMaterialApp(title: 'My app title', home: new QrCode()));
+  runApp(GetMaterialApp(title: 'My app title', home: new QrCode()));
 }
 
 class QrCode extends StatelessWidget {
-   final QrScanController qrScanController =
+  final QrScanController qrScanController =
       Get.put<QrScanController>(QrScanController());
   @override
   Widget build(BuildContext context) {
@@ -35,48 +33,47 @@ class QrCode extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     GestureDetector(
-                      //shadowColor: Colors.blueAccent,
-                      //elevation: 5,
-                      child: ClipPath(
-                        clipper: ShapeBorderClipper(
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(15))),
-                        child: Container(
-                          height: 337,
-                          width: 305,
-                          decoration: BoxDecoration(
-                            color: Color(0xFFFFFFF),
-                          ),
-                          padding: EdgeInsets.all(10.0),
-                          alignment: Alignment.center,
+                        //shadowColor: Colors.blueAccent,
+                        //elevation: 5,
+                        child: ClipPath(
+                          clipper: ShapeBorderClipper(
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(15))),
                           child: Container(
+                            height: 337,
+                            width: 305,
+                            decoration: BoxDecoration(
+                              color: Color(0xFFFFFFF),
+                            ),
+                            padding: EdgeInsets.all(10.0),
                             alignment: Alignment.center,
-                            child: Column(
-                              mainAxisSize: MainAxisSize.min,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Column(
-                                      crossAxisAlignment:
-                                          CrossAxisAlignment.center,
-                                      mainAxisSize: MainAxisSize.min,
-                                      children: [
-                                        ImagenMembresia(),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                              ],
+                            child: Container(
+                              alignment: Alignment.center,
+                              child: Column(
+                                mainAxisSize: MainAxisSize.min,
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.center,
+                                        mainAxisSize: MainAxisSize.min,
+                                        children: [
+                                          ImagenMembresia(),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                      onTap: (){
-                         QrScanController().scan();
-                      } 
-                    ),
+                        onTap: () {
+                          QrScanController().scan();
+                        }),
                   ],
                 ),
                 SizedBox(
@@ -105,11 +102,13 @@ class QrCode extends StatelessWidget {
                                   fontWeight: FontWeight.bold)),
                         ),
                         Container(
-                          child: Text('+',
-                              style: GoogleFonts.mavenPro(
-                                  fontSize: 40,
-                                  color: Color(0xFFE01218),
-                                  fontWeight: FontWeight.bold),),
+                          child: Text(
+                            '+',
+                            style: GoogleFonts.mavenPro(
+                                fontSize: 40,
+                                color: Color(0xFFE01218),
+                                fontWeight: FontWeight.bold),
+                          ),
                         ),
                       ],
                     ),
@@ -126,9 +125,13 @@ class QrCode extends StatelessWidget {
                                 color: Color(0xFF0058A3),
                                 fontWeight: FontWeight.bold)),
                         Spacer(),
-                        Text('${value.Membership.vencimiento}',
-                            style: GoogleFonts.mavenPro(
-                                fontSize: 18, color: Color(0xFF000000),),),
+                        Text(
+                          '${value.Membership.vencimiento}',
+                          style: GoogleFonts.mavenPro(
+                            fontSize: 18,
+                            color: Color(0xFF000000),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -141,15 +144,21 @@ class QrCode extends StatelessWidget {
                   child: Container(
                     child: Row(
                       children: [
-                        Text('Suscriptor',
-                            style: GoogleFonts.mavenPro(
-                                fontSize: 18,
-                                color: Color(0xFF0058A3),
-                                fontWeight: FontWeight.bold),),
+                        Text(
+                          'Suscriptor',
+                          style: GoogleFonts.mavenPro(
+                              fontSize: 18,
+                              color: Color(0xFF0058A3),
+                              fontWeight: FontWeight.bold),
+                        ),
                         Spacer(),
-                        Text('${value.Membership.suscriptor}',
-                            style: GoogleFonts.mavenPro(
-                                fontSize: 18, color: Color(0xFF000000),),),
+                        Text(
+                          '${value.Membership.suscriptor}',
+                          style: GoogleFonts.mavenPro(
+                            fontSize: 18,
+                            color: Color(0xFF000000),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -168,11 +177,13 @@ class QrCode extends StatelessWidget {
                                 color: Color(0xFF0058A3),
                                 fontWeight: FontWeight.bold)),
                         Spacer(),
-                        Text('${value.Membership.membresia}',
-                            style: GoogleFonts.mavenPro(
-                                fontSize: 18, color: Color(0xFF000000),
-                                ),
-                                ),
+                        Text(
+                          '${value.Membership.membresia}',
+                          style: GoogleFonts.mavenPro(
+                            fontSize: 18,
+                            color: Color(0xFF000000),
+                          ),
+                        ),
                       ],
                     ),
                   ),
@@ -204,9 +215,9 @@ class ImagenMembresia extends StatelessWidget {
 }
 
 class _MembresiaDigital extends State<QrCode> {*/
-  //String _data = "";
- 
- /* _scan() async {
+//String _data = "";
+
+/* _scan() async {
     await FlutterBarcodeScanner.scanBarcode(
             "#0058A3", "Salir", true, ScanMode.QR)
         .then((value) => setState(() => _data = value));

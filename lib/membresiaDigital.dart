@@ -74,7 +74,7 @@ class QrCode extends StatelessWidget {
                         ),
                       ),
                       onTap: (){
-                         QrScanController().scan();
+                         value.scan();
                       } 
                     ),
                   ],

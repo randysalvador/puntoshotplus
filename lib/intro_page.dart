@@ -175,7 +175,7 @@ class _IntroPageState extends State<IntroPage> {
 
   _displayImage(int path) {
     return Image.asset(
-      "images/$path.png",
+      "img/$path.png",
       height: MediaQuery.of(context).size.height * .3,
     );
   }

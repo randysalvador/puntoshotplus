@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:puntoshots/descuentosPromociones.dart';
 import 'package:puntoshots/establecimientos.dart';
-import 'package:puntoshots/membresiaDigital.dart';
+import 'package:puntoshots/Membership/view/membresiaDigital.dart';
 import 'package:puntoshots/presentation.dart';
-import 'package:puntoshots/membresiaDigital.dart';
+import 'package:puntoshots/intro_page.dart';
+
 import 'package:get/get.dart';
 
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -27,8 +28,10 @@ void main() {
 class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
-      case 'intro_page':
+      case 'presentacion':
         return MaterialPageRoute(builder: (_) => Presentacion());
+      case 'intro_page':
+        return MaterialPageRoute(builder: (_) => IntroPage());
       default:
         return MaterialPageRoute(builder: (_) {
           return Scaffold(

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:puntoshots/presentation.dart';
 import 'package:get/get.dart';
-import 'package:puntoshots/QrScan/controller/qr_scan_controller.dart';
+import 'package:puntoshots/Membership/controller/qr_scan_controller.dart';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
 
 void main() {

@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'dart:async';
 import 'package:flutter_barcode_scanner/flutter_barcode_scanner.dart';
-import 'package:puntoshots/QrScan/model/qr_scan_model.dart';
+import 'package:puntoshots/Membership/model/qr_scan_model.dart';
 
 class QrScanController extends GetxController {
   //"{\"vencimiento\": \"02/01/2050\", \"suscriptor\": \"Randy Salvador\", \"membresia\": \"150994\"}";

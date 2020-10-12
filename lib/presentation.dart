@@ -1,7 +1,7 @@
 //import 'dart:html';
 import 'dart:io';
 import 'package:puntoshots/establecimientos.dart';
-import 'package:puntoshots/QrScan/view/membresiaDigital.dart';
+import 'package:puntoshots/Membership/view/membresiaDigital.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';

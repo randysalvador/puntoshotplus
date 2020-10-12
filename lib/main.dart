@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:puntoshots/descuentosPromociones.dart';
 import 'package:puntoshots/establecimientos.dart';
 import 'package:puntoshots/Membership/view/membresiaDigital.dart';
 import 'package:puntoshots/presentation.dart';
 import 'package:puntoshots/intro_page.dart';
+=======
+import 'package:puntoshots/NotUsed/presentation.dart';
+>>>>>>> 7a22a78279ed5970fd9439b20fa2e9a82c064aa9
 
 import 'package:get/get.dart';
 
@@ -19,13 +23,14 @@ void main() {
         primaryColor: Color(0xFF0058A3),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      initialRoute: 'intro_page',
-      onGenerateRoute: Router.generateRoute,
+      home: Presentacion(),
+      // initialRoute: 'intro_page',
+      //onGenerateRoute: Router.generateRoute,
     ),
   );
 }
 
-class Router {
+/*class Router {
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
       case 'presentacion':
@@ -42,4 +47,4 @@ class Router {
         });
     }
   }
-}
+}*/

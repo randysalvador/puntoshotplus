@@ -15,7 +15,7 @@ class QrScanModel {
   }
 }
 
-QrScanModel QrScanfromJson(String jsonData) {
+QrScanModel qrScanfromJson(String jsonData) {
   final data = json.decode(jsonData);
   return QrScanModel.fromQRStringJson(data);
 }

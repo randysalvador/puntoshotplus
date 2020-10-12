@@ -11,15 +11,15 @@ class StoreController extends GetxController {
     getStore(dataString);
   }
 
-  StoreModel Store;
-  Future<StoreModel> getStore(String _data) async {
+  StoreModel store;
+  Future<void> getStore(String _data) async {
     if (_data == '') {
       print("Error en el sistema xd"); //Widget Mensaje error
     } else {
-      Store = StoreModelfromJson(_data);
-      print(Store.id);
-      print(Store.name);
-      print(Store.image);
+      store = storeModelfromJson(_data);
+      print(store.id);
+      print(store.name);
+      print(store.image);
     }
   }
 

@@ -1,5 +1,5 @@
+import 'package:puntoshots/NotUsed/presentation.dart';
 import 'package:puntoshots/models/step_model.dart';
-import 'package:puntoshots/presentation.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatefulWidget {
@@ -35,7 +35,6 @@ class _IntroPageState extends State<IntroPage> {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) {
-                //TODO return widget
                 return Presentacion();
               }),
             );

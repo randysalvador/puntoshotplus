@@ -12,7 +12,7 @@ class StoreModel {
   }
 }
 
-StoreModel StoreModelfromJson(String jsonData) {
+StoreModel storeModelfromJson(String jsonData) {
   final data = json.decode(jsonData);
   return StoreModel.fromStoreStringJson(data);
 }

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:puntoshots/intro_page.dart';
+import 'package:puntoshots/OnBoarding/intro_page.dart';
 import 'package:get/get.dart';
 
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';

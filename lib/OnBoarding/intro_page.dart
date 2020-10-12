@@ -1,5 +1,5 @@
 import 'package:puntoshots/NotUsed/presentation.dart';
-import 'package:puntoshots/models/step_model.dart';
+import 'package:puntoshots/OnBoarding/step_model.dart';
 import 'package:flutter/material.dart';
 
 class IntroPage extends StatefulWidget {

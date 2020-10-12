@@ -1,7 +1,5 @@
-//import 'dart:html';
-import 'dart:io';
-import 'package:puntoshots/establecimientos.dart';
-import 'package:puntoshots/QrScan/view/membresiaDigital.dart';
+import 'package:puntoshots/Membership/membership_view.dart';
+import 'package:puntoshots/NotUsed/establecimientos.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,12 +13,12 @@ class Presentacion extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: CardWidget(context),
+      body: cardWidget(context),
     );
   }
 }
 
-Widget CardWidget(BuildContext context) {
+Widget cardWidget(BuildContext context) {
   return Column(
     children: <Widget>[
       Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[

@@ -2,8 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:puntoshots/presentation.dart';
-import 'package:puntoshots/descuentosPromociones.dart';
+import 'package:puntoshots/NotUsed/presentation.dart';
+import 'package:puntoshots/NotUsed/descuentosPromociones.dart';
 import 'package:get/get.dart';
 
 void main() {

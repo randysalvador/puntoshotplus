@@ -2,12 +2,19 @@ import 'package:get/get.dart';
 import 'dart:async';
 import 'package:puntoshots/Stores/model/store_model.dart';
 
+import 'package:flutter/services.dart' show rootBundle;
+
 class StoreController extends GetxController {
   //"{\"vencimiento\": \"02/01/2050\", \"suscriptor\": \"Randy Salvador\", \"membresia\": \"150994\"}";
-  String dataString = "{\"id\": \" \", \"name\": \" \", \"image\": \" \"}";
+  String dataString;
   @override
   onInit() {
     super.onInit();
+    getJson();
+  }
+
+  Future<void> getJson() async {
+    dataString = await rootBundle.loadString('stores.json');
     getStore(dataString);
   }
 
@@ -22,13 +29,4 @@ class StoreController extends GetxController {
       print(store.image);
     }
   }
-
-  /* Future scan() {
-    FlutterBarcodeScanner.scanBarcode("#0058A3", "Salir", true, ScanMode.QR)
-        .then((value) {
-      print(value);
-      getMemershipByQr(value);
-      update();
-    });
-  } */
 }

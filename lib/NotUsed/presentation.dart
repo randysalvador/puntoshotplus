@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
+import 'package:puntoshots/Stores/view/store.dart';
 
 class Presentacion extends StatelessWidget {
   @override
@@ -181,7 +182,7 @@ Widget cardWidget(BuildContext context) {
           ),
         ),
         onTap: () {
-          Get.to(QrCode());
+          Get.to(StorePage());
         },
       ),
       SizedBox(

@@ -5,7 +5,6 @@ import 'package:puntoshots/Stores/model/store_model.dart';
 import 'package:flutter/services.dart' show rootBundle;
 
 class StoreController extends GetxController {
-  //"{\"vencimiento\": \"02/01/2050\", \"suscriptor\": \"Randy Salvador\", \"membresia\": \"150994\"}";
   String dataString;
   @override
   onInit() {
@@ -18,15 +17,15 @@ class StoreController extends GetxController {
     getStore(dataString);
   }
 
-  StoreModel store;
+  List<StoreModel> store = [];
   Future<void> getStore(String _data) async {
     if (_data == '') {
       print("Error en el sistema xd"); //Widget Mensaje error
     } else {
-      store = storeModelfromJson(_data);
-      print(store.id);
-      print(store.name);
-      print(store.image);
+      store = storeModelfromJson(_data) as List<StoreModel>;
+      print(store[0].id);
+      print(store[0].name);
+      print(store[0].image);
     }
   }
 }

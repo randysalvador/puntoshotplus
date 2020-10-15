@@ -58,7 +58,11 @@ class StorePage extends StatelessWidget {
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 5.0, childAspectRatio: 0.8),
         children: [
-//          imageCard(title: _.products.Product.data, description: ,price: '0',image: )
+          Text(
+              "${_.store.id.toString()} >> ${_.store.name} >> ${_.store.image} "),
+
+          ///Solo mandas a llamar los parametros de este.
+//          imageCard(title: _.store.Store.data, description: ,price: '0',image: )
         ],
       ),
     );

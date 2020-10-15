@@ -4,7 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:get/get.dart';
-import 'package:puntoshots/Stores/view/store.dart';
+import 'package:puntoshots/Stores/store_view.dart';
 
 class Presentacion extends StatelessWidget {
   @override

@@ -10,19 +10,14 @@ class StorePage extends StatelessWidget {
         title: Text('Tiendas'),
       ),
       body: SingleChildScrollView(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 20),
-            GetBuilder<StoreController>(
-              init: StoreController(),
-              builder: (_) => GridView.builder(
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 1),
-                itemBuilder: (context, index) => Text(
-                    "${_.store[index].id.toString()} >> ${_.store[index].name}"),
-              ),
-            ),
-          ],
+        GetBuilder<StoreController>(
+          init: StoreController(),
+          builder: (_) => GridView.builder(
+            gridDelegate:
+                SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 1),
+            itemBuilder: (context, index) => Text(
+                "${_.store[index].id.toString()} >> ${_.store[index].name}"),
+          ),
         ),
       ),
     );

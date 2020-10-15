@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'store_controller.dart';
 import 'store_model.dart';
 
-class StorePage extends StatelessWidget {
+class StoreView extends StatelessWidget {
   final StoreController storeController =
       Get.put<StoreController>(StoreController());
   @override

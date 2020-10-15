@@ -4,8 +4,6 @@ import 'package:flutter/services.dart' show rootBundle;
 import 'store_model.dart';
 
 class StoreController extends GetxController {
-  static StoreController to = Get.find();
-
   String dataString;
   @override
   onInit() {

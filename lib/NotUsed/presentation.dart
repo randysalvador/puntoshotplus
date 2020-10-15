@@ -182,7 +182,7 @@ Widget cardWidget(BuildContext context) {
           ),
         ),
         onTap: () {
-          Get.to(StorePage());
+          Get.to(StoreView());
         },
       ),
       SizedBox(

@@ -17,7 +17,7 @@ class StoreController extends GetxController {
   Future<List<Store>> getAllStores() async {
     //final response = await store.get("$baseUrl/store/");
     final response = await rootBundle.loadString('stores.json');
-    print(response);
+    //print(response);
     if (/*response.statusCode == 200*/ response == '') {
       return allStoresFromJson(/*response.body*/ response);
     } else {

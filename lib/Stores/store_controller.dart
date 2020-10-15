@@ -22,7 +22,7 @@ class StoreController extends GetxController {
 
   Future<List<Store>> getAllStores() async {
     //final response = await store.get("$baseUrl/store/");
-    final response = await rootBundle.loadString('assets/stores.json');
+    final response = await rootBundle.loadString('stores.json');
     //store = allStoresFromJson(/*response.body*/ response);
     return allStoresFromJson(response);
     //print(response);

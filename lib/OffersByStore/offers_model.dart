@@ -3,14 +3,15 @@ class Offer {
   final String title;
   final String description;
   final int storeId;
-  final List<Image> images;
+  final List<ImageFromOffer> images;
 
   Offer({this.id, this.title, this.description, this.storeId, this.images});
 
   factory Offer.fromJson(Map<String, dynamic> parsedJson) {
     var list = parsedJson['images'] as List;
     print(list.runtimeType); //returns List<dynamic>
-    List<Image> imagesList = list.map((i) => Image.fromJson(i)).toList();
+    List<ImageFromOffer> imagesList =
+        list.map((i) => ImageFromOffer.fromJson(i)).toList();
 
     return Offer(
         id: parsedJson["id"],
@@ -21,11 +22,11 @@ class Offer {
   }
 }
 
-class Image {
+class ImageFromOffer {
   final String url;
-  Image({this.url});
+  ImageFromOffer({this.url});
 
-  factory Image.fromJson(Map<String, dynamic> parsedJson) {
-    return Image(url: parsedJson['url']);
+  factory ImageFromOffer.fromJson(Map<String, dynamic> parsedJson) {
+    return ImageFromOffer(url: parsedJson['url']);
   }
 }

@@ -22,7 +22,7 @@ class DescuentosPromociones extends StatelessWidget {
         appBar: AppBar(
           title: Text('Descuentos & Promociones',
               style: GoogleFonts.mavenPro(
-                  fontSize: 20, fontWeight: FontWeight.bold)),
+                  fontSize: 8, fontWeight: FontWeight.bold)),
           backgroundColor: Color(0xFF0058A3),
         ),
         body: SingleChildScrollView(

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:puntoshots/OnBoarding/intro_page.dart';
 import 'package:get/get.dart';
+import 'OffersByStore/offers_view.dart';
 import 'Stores/store_controller.dart';
+import 'Stores/store_view.dart';
 
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -13,9 +15,6 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final StoreController storeController =
-        Get.put<StoreController>(StoreController());
-    // Get.put(StoreController());
     return GetMaterialApp(
       title: 'PuntosHot',
       debugShowCheckedModeBanner: false,
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF0058A3),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: IntroPage(),
+      home: StoreView(),
       // initialRoute: 'intro_page',
       //onGenerateRoute: Router.generateRoute,
     );

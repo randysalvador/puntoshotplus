@@ -42,8 +42,10 @@ class StoreView extends StatelessWidget {
 
   Widget storeCard({String url, int storeId}) {
     return GestureDetector(
-      onTap: () => OfferPage(
-        id_store: storeId,
+      onTap: () => Get.to(
+        OfferPage(
+          id_store: storeId,
+        ),
       ),
       child: Card(
         shape: RoundedRectangleBorder(

@@ -8,6 +8,7 @@ class OfferPage extends StatelessWidget {
   final OfferController offerController =
       Get.put<OfferController>(OfferController());
   final int id_store;
+
   OfferPage({Key key, this.id_store});
 
   @override
@@ -37,30 +38,21 @@ class OfferPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height,
-                child: FutureBuilder(
-                  future: _.getOffersByStoreId(),
-                  builder: (context, snapshot) {
-                    if (snapshot.hasData) {
-                      List<Offer> offers = snapshot.data ?? [];
-                      return ListView.builder(
-                        primary: false,
-                        physics: NeverScrollableScrollPhysics(),
-                        itemCount: offers.length,
-                        itemBuilder: (context, index) => Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Container(
-                            color: Colors.black,
-                            height: 250,
-                            child: Image.network(snapshot.data[index].url,
-                                fit: BoxFit.fitHeight),
-                          ),
-                        ),
-                      );
-                    } else {
-                      return Center(child: CircularProgressIndicator());
-                    }
-                  },
+                height: MediaQuery.of(context).size.height *
+                    (_.offer.images.length - 0.6),
+                child: ListView.builder(
+                  primary: false,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: _.offer.images.length,
+                  itemBuilder: (context, index) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Container(
+                      color: Colors.black,
+                      height: 450,
+                      child: Image.network(_.offer.images[index].url,
+                          fit: BoxFit.fitHeight),
+                    ),
+                  ),
                 ),
               ),
             ],

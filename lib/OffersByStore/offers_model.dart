@@ -8,7 +8,7 @@ class Offer {
   Offer({this.id, this.title, this.description, this.storeId, this.images});
 
   factory Offer.fromJson(Map<String, dynamic> parsedJson) {
-    var list = parsedJson['images'] as List;
+    var list = parsedJson['images_array'] as List;
     print(list.runtimeType); //returns List<dynamic>
     List<ImageFromOffer> imagesList =
         list.map((i) => ImageFromOffer.fromJson(i)).toList();

@@ -12,10 +12,11 @@ class OfferController extends GetxController {
     getOffersByStoreId();
   }
 
-  Future<Offer> getOffersByStoreId(/*int storeId*/) async {
+  Offer offer;
+  Future getOffersByStoreId(/*int storeId*/) async {
     //final response = await http.get("$baseUrl/offers/storeId");
     final response = await rootBundle.loadString('assets/oferrsByStoreId.json');
     final jsonResponse = json.decode(response);
-    return Offer.fromJson(jsonResponse);
+    offer = Offer.fromJson(jsonResponse);
   }
 }

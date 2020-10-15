@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:puntoshots/OnBoarding/intro_page.dart';
 import 'package:get/get.dart';
 
+import 'Stores/view/store.dart';
+
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
@@ -14,7 +16,7 @@ void main() {
         primaryColor: Color(0xFF0058A3),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: IntroPage(),
+      home: StorePage(),
       // initialRoute: 'intro_page',
       //onGenerateRoute: Router.generateRoute,
     ),

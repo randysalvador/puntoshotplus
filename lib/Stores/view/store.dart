@@ -51,19 +51,19 @@ class StorePage extends StatelessWidget {
   Widget productGridView() {
     return GetBuilder<StoreController>(
       init: StoreController(),
-      builder: (_) => GridView(
+      builder: (_) => GridView.builder(
         physics: NeverScrollableScrollPhysics(),
         scrollDirection: Axis.vertical,
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 5.0, childAspectRatio: 0.8),
-        children: [
+        itemBuilder: (context, index) => 
           Text(
-              "${_.store.id.toString()} >> ${_.store.name} >> ${_.store.image} "),
+              "${_.store[index].id.toString()} >> ${_.store[index].name}"),
 
           ///Solo mandas a llamar los parametros de este.
 //          imageCard(title: _.store.Store.data, description: ,price: '0',image: )
-        ],
+        ,
       ),
     );
   }

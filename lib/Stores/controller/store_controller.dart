@@ -13,15 +13,17 @@ class StoreController extends GetxController {
   }
 
   //String baseUrl = "http://192.168.13.101:3000/";
-  Store store = Store();
-  Future<List<Store>> getAllStores() async {
+
+  List<Store> store = [];
+
+  Future<void> getAllStores() async {
     //final response = await store.get("$baseUrl/store/");
     final response = await rootBundle.loadString('stores.json');
     //print(response);
     if (/*response.statusCode == 200*/ response == '') {
-      return allStoresFromJson(/*response.body*/ response);
+      print("<<<< FATAL ERROR >>>>");
     } else {
-      return null;
+      store = allStoresFromJson(/*response.body*/ response);
     }
   }
 }

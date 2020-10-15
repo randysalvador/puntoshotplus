@@ -74,12 +74,9 @@ flutter:
     - img/1.png
     - img/2.png
     - img/3.png
-
-<<<<<<< HEAD
-=======
+    - assets/stores.json
     - assets/oferrsByStoreId.json
 
->>>>>>> a0ed2f5888a5cc61b83d52c7dac78b3f4b157214
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

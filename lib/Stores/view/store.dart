@@ -10,7 +10,7 @@ class StorePage extends StatelessWidget {
         title: Text('Tiendas'),
       ),
       body: SingleChildScrollView(
-        GetBuilder<StoreController>(
+        child: GetBuilder<StoreController>(
           init: StoreController(),
           builder: (_) => GridView.builder(
             gridDelegate:

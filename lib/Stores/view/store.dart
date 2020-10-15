@@ -13,7 +13,15 @@ class StorePage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 20),
-            productsContainer(),
+            GetBuilder<StoreController>(
+              init: StoreController(),
+              builder: (_) => GridView.builder(
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 1),
+                itemBuilder: (context, index) => Text(
+                    "${_.store[index].id.toString()} >> ${_.store[index].name}"),
+              ),
+            ),
           ],
         ),
       ),

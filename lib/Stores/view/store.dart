@@ -57,13 +57,11 @@ class StorePage extends StatelessWidget {
         shrinkWrap: true,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, crossAxisSpacing: 5.0, childAspectRatio: 0.8),
-        itemBuilder: (context, index) => 
-          Text(
-              "${_.store[index].id.toString()} >> ${_.store[index].name}"),
+        itemBuilder: (context, index) =>
+            Text("${_.store[index].id.toString()} >> ${_.store[index].name}"),
 
-          ///Solo mandas a llamar los parametros de este.
+        ///Solo mandas a llamar los parametros de este.
 //          imageCard(title: _.store.Store.data, description: ,price: '0',image: )
-        ,
       ),
     );
   }

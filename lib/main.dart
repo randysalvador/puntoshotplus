@@ -8,12 +8,15 @@ import 'Stores/view/store.dart';
 //import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final StoreController storeController =
+        Get.put<StoreController>(StoreController());
     // Get.put(StoreController());
     return GetMaterialApp(
       title: 'PuntosHot',

@@ -74,7 +74,7 @@ flutter:
     - img/1.png
     - img/2.png
     - img/3.png
-    - stores.json
+    - assets/stores.json
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

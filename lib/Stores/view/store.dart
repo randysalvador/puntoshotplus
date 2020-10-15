@@ -5,13 +5,14 @@ import 'package:puntoshots/Stores/controller/store_controller.dart';
 class StorePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(StoreController());
     return Scaffold(
       appBar: AppBar(
         title: Text('Tiendas'),
       ),
       body: Container(
         child: GetBuilder<StoreController>(
-          init: StoreController(),
+          init: controller,
           builder: (_) => GridView.builder(
             itemCount: _.store.length,
             gridDelegate:

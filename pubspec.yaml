@@ -74,7 +74,7 @@ flutter:
     - img/1.png
     - img/2.png
     - img/3.png
-    - assets/stores.json
+
 <<<<<<< HEAD
 =======
     - assets/oferrsByStoreId.json

@@ -9,14 +9,26 @@ class StoreController extends GetxController {
   @override
   onInit() {
     super.onInit();
-    getJson();
+    getAllStores();
   }
 
-  Future<void> getJson() async {
+  //String baseUrl = "http://192.168.13.101:3000/";
+  Store store = Store();
+  Future<List<Store>> getAllStores() async {
+    //final response = await client.get("$baseUrl/posts/");
+    final response = await rootBundle.loadString('stores.json');
+    if (/*response.statusCode == 200*/ response == '') {
+      return allStoresFromJson(/*response.body*/ response);
+    } else {
+      return null;
+    }
+  }
+}
+
+/*Future<void> getJson() async {
     dataString = await rootBundle.loadString('stores.json');
     getStore(dataString);
   }
-
   List<StoreModel> store = [];
   Future<void> getStore(String _data) async {
     if (_data == '') {
@@ -27,5 +39,22 @@ class StoreController extends GetxController {
       print(store[0].name);
       print(store[0].image);
     }
+  } */
+
+/*//-------------UseData
+Future<UserData> getUserData(String uid) async {
+  final response = await client.get("$baseUrl/users/$uid");
+  if (response.statusCode == 200) {
+    return userDataFromJSON(response.body);
+  } else {
+    return null;
   }
 }
+Future<List<Users>> getAllUser() async {
+  final response = await client.get("$baseUrl/users/");
+  if (response.statusCode == 200) {
+    return AllUsersFromJSON(response.body);
+  } else {
+    return null;
+  }
+}*/

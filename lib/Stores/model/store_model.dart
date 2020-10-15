@@ -1,36 +1,40 @@
 import 'dart:convert';
-import 'package:flutter/foundation.dart';
 
-class StoreModel {
+class Store {
   int id;
   String name;
   String image;
 
-  StoreModel({this.id, this.name, this.image});
+  Store({this.id, this.name, this.image});
 
-  factory StoreModel.fromStoreStringJson(Map<String, dynamic> map) {
-    return StoreModel(id: map["id"], name: map["name"], image: map["image"]);
+  factory Store.fromJson(Map<String, dynamic> map) {
+    return Store(id: map["id"], name: map["name"], image: map["image"]);
   }
 }
 
-StoreModel storeModelfromJson(String jsonData) {
+List<Store> allStoresFromJson(String jsonData) {
   final data = json.decode(jsonData);
-  return StoreModel.fromStoreStringJson(data);
+  return List<Store>.from(data.map((item) => Store.fromJson(item)));
 }
 
-class StoresList {
-  final List<StoreModel> data;
+/*class StoresList {
+  final List<Store> data;
 
   StoresList({this.data});
 
   factory StoresList.fromJson(List<dynamic> parsedJson) {
-    List<StoreModel> stores = new List<StoreModel>();
-
+    List<Store> stores = new List<Store>();
     return new StoresList(
       data: stores,
     );
   }
-}
+
+  StoreModel storeModelfromJson(String jsonData) {
+  final data = json.decode(jsonData);
+  return StoreModel.fromStoreStringJson(data);
+  }
+
+}*/
 
 /* class StoreList {
   final List<StoreModel> data;

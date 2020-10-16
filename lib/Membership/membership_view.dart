@@ -73,16 +73,17 @@ class QrCode extends StatelessWidget {
                     ),
                   ],
                 ),
-
-                Text("${value.membership.membresia}"),
+                /* Text("${value.membership.membresia}"),
                 Text(value.membership.suscriptor),
-                Text(value.membership.vencimiento),
-
-                //numeroMembresia(value.membership.membresia),
-                //  SizedBox(height: 5),
-                //suscriptor(value.membership.suscriptor),
-                // SizedBox(height: 5),
-                //vencimiento(value.membership.vencimiento),
+                Text(value.membership.vencimiento), */
+                SizedBox(height: 5),
+                imagenLogo(),
+                SizedBox(height: 5),
+                numeroMembresia("${value.membership.membresia}"),
+                SizedBox(height: 5),
+                suscriptor("${value.membership.suscriptor}"),
+                SizedBox(height: 5),
+                vencimiento(value.membership.vencimiento),
               ],
             ),
           ),
@@ -215,9 +216,43 @@ class QrCode extends StatelessWidget {
       ),
     );
   }
+
+  /*  Widget imagenLogo() {
+    AssetImage assetImage = AssetImage('img/logo.png');
+    return Container(
+      child: Image(
+        image: assetImage,
+        width: 200,
+      ),
+    );
+  } */
+
+  Widget imagenLogo() {
+    AssetImage assetImage = AssetImage('img/logo.png');
+    return Padding(
+      padding: const EdgeInsets.all(15),
+      child: Container(
+        child: Row(
+          children: [
+            Text('No. Membresía',
+                style: GoogleFonts.mavenPro(
+                    fontSize: 18,
+                    color: Color(0xFF0058A3),
+                    fontWeight: FontWeight.bold)),
+            Spacer(),
+            Image(
+              image: assetImage,
+              width: 150,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
 
 /*
+
   _MembresiaDigital createState() => _MembresiaDigital();
 }
 
@@ -228,4 +263,4 @@ class _MembresiaDigital extends State<QrCode> {*/
     await FlutterBarcodeScanner.scanBarcode(
             "#0058A3", "Salir", true, ScanMode.QR)
         .then((value) => setState(() => _data = value));
-  }*/
+}*/

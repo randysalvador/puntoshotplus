@@ -182,7 +182,7 @@ Widget cardWidget(BuildContext context) {
           ),
         ),
         onTap: () {
-          Get.to(StoreView());
+          Get.to(QrCode());
         },
       ),
       SizedBox(

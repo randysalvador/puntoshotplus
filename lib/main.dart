@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:puntoshots/OnBoarding/intro_page.dart';
 import 'package:get/get.dart';
+import 'NotUsed/presentation.dart';
 import 'OffersByStore/offers_view.dart';
 import 'Stores/store_controller.dart';
 import 'Stores/store_view.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
         primaryColor: Color(0xFF0058A3),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: StoreView(),
+      home: Presentacion(),
       // initialRoute: 'intro_page',
       //onGenerateRoute: Router.generateRoute,
     );

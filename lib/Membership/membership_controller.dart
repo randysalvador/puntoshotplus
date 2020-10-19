@@ -19,11 +19,11 @@ class QrScanController extends GetxController {
     getMembershipByQr(localStorage);
   }
 
-  void decrypt(String barcodeScanRes) {
-    final key = Key.fromUtf8('key'); //'
+  void decrypt(String data) {
+    final key = Key.fromUtf8('1598heranjaiph56asd/a*s-qw29[},a'); //Not Delete.
     final iv = IV.fromLength(16);
     final encrypting = Encrypter(AES(key));
-    final decrypted = encrypting.decrypt(barcodeScanRes as Encrypted, iv: iv);
+    final decrypted = encrypting.decrypt(data as Encrypted, iv: iv);
     result = decrypted;
     getMembershipByQr(result);
   }
